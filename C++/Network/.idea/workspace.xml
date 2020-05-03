@@ -444,7 +444,7 @@
       <workItem from="1577598464939" duration="52000" />
       <workItem from="1588415569831" duration="3885000" />
       <workItem from="1588475532705" duration="4990000" />
-      <workItem from="1588494594397" duration="1324000" />
+      <workItem from="1588494594397" duration="1737000" />
     </task>
     <task id="LOCAL-00001" summary="This is the dynamic network program.">
       <created>1577268368761</created>
@@ -492,7 +492,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38058000" />
+    <option name="totallyTimeSpent" value="38471000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -504,7 +504,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16614583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

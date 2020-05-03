@@ -6,9 +6,6 @@ public class Main {
 
         Run run = new Run();
 
-//        run.net_1();
-//        run.net_2();
-//        run.net_3();
 //        run.net_4(10,10);
 //        run.net_5();
         DataWrite dataWrite = new DataWrite(1000000, 1000);
