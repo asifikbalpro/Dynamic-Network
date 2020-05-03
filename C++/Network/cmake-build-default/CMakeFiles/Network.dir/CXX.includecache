@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/d/Projects/Dynamic-Network/C++/Network/main.cpp
+iostream
+-
+vector
+-
+iomanip
+-
+src/Network.h
+/cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Network.h
+
+/cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Network.cpp
+iostream
+-
+random
+-
+fstream
+-
+Network.h
+/cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Network.h
+
+/cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Network.h
+iostream
+-
+array
+-
+vector
+-
+fstream
+-
+Network.h
+/cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Network.h
+

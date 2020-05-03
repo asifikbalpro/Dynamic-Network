@@ -46,6 +46,12 @@ class Network4 {
      * node_A is containing random number from loop.
      * and there is no repetition.
      */
+    public void defult(){
+        for (int i = 0; i < node_A.length; i++){
+            vectorDegree.add(1); // setting all vector to one.cause "nodeB is already one node.
+//            vectorDegreeAve.add(0); // setting all vector to zero.
+        }
+    }
     public void node_link_generator(){
         random = new Random();
         for (int i = 0; i < node_A.length; i++){
@@ -102,9 +108,30 @@ class Network4 {
      * this put that there is 1 = 100.
      * todo: needed improve.it's take too much time.
      */
-    public void degreeDistributionAverageV2(){ /*****************************************************/
-
+    /*************************************************************************************************************/
+    public int degreeDistributionAverageV2(int nodeA){ /*****************************************************/
+        return vectorDegreeAve.set(nodeA, vectorDegreeAve.elementAt(nodeA)+1); // returning vector degree average
     }
+    // degree average getting done..
+    public void degreeDistributionAverageDone(){
+//        System.out.println("degreeDistributionAverage");
+        for (int i = 0; i < vectorDegree.size();i++){
+//            vectorDegreeAve.add(0);
+            degreeDistributionAverageV2(vectorDegree.elementAt(i)); // calling degreeDistributionAverageV2
+        }
+//        for (int i = 1; i < vectorDegreeAve.size();i++){
+//            if (vectorDegreeAve.elementAt(i) == 0){
+//                System.out.println("ye");
+//                vectorDegreeAve.remove(i);
+//            }
+//        }
+//        vectorDegreeAve.trimToSize();
+//        for (int i = 0; i < vectorDegreeAve.size(); i++){
+//            System.out.println(vectorDegreeAve.elementAt(i));
+//        };
+//        System.out.println(vectorDegreeAve);
+    }
+    /***********************************************************************************************/
 
     public void degree_distribution_average(){
         degree_ava = new int[degree[degree.length-1]];
@@ -127,21 +154,23 @@ class Network4 {
      * for network plot.
      * and degree distribution.
      */
+
     public void data() throws IOException {
-//        FileWriter fileWriter = new FileWriter(file.getAbsoluteFile());
-//        FileWriter fileWriter2 = new FileWriter(file_graph.getAbsoluteFile());
+        System.out.println("writing data");
+        FileWriter fileWriter = new FileWriter(file.getAbsoluteFile());
+        FileWriter fileWriter2 = new FileWriter(file_graph.getAbsoluteFile());
         FileWriter fileWriter3 = new FileWriter(file_graph2.getAbsoluteFile());
-//        for (int i = 0; i < node_A.length; i++){
-//            fileWriter.write(node_A[i] +"\t"+ node_B[i]+"\n");
-//        }
-//        for (int i = 0; i < degree.length; i++){
-//            fileWriter2.write(i + "\t" + degree[i] +"\n");
-//        }
+        for (int i = 0; i < node_A.length; i++){
+            fileWriter.write(node_A[i] +"\t"+ node_B[i]+"\n");
+        }
+        for (int i = 0; i < degree.length; i++){
+            fileWriter2.write(i + "\t" + degree[i] +"\n");
+        }
         for (int i = 0; i < degree_ava.length; i++){
             fileWriter3.write(i + "\t" + degree_ava[i] +"\n");
         }
-//        fileWriter.close();
-//        fileWriter2.close();
+        fileWriter.close();
+        fileWriter2.close();
         fileWriter3.close();
     }
 
@@ -156,5 +185,12 @@ class Network4 {
 //        }
         System.out.println(vectorDegree);
         System.out.println(vectorDegreeAve);
+    }
+
+    public void alldone() {
+        System.out.println("vec "+vectorDegreeAve);
+        Object average = (Vector)vectorDegreeAve.clone();
+        System.out.println("av "+ average);
+
     }
 }

@@ -42,9 +42,14 @@ public:
     void NodeLinkGenerator();
     void DegreeDistribution();
     void DegreeDistributionAverage();
+
     void Data();
+    void view();
 
-
+    //v2
+    void degreeDistriburionv2(int nodeA);
+    void degreeDistributionAveragev2(int nodeA);
+    void degreeDistributionAveragedone();
 };
 
 
