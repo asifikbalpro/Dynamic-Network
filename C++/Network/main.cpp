@@ -8,15 +8,15 @@ int main() {
 
     clock_t start, end; // clock
     std::cout << "Hello, World!" << std::endl;
-    int network_size = 100; // this is contain Network size
+    int network_size = 1000000; // this is contain Network size
 
     start = clock();
 
     Network network1(network_size);
     network1.NodeLinkGenerator();
-    network1.DegreeDistribution();
-    network1.DegreeDistributionAverage();
-//    network1.degreeDistributionAveragedone();
+//    network1.DegreeDistribution();
+//    network1.DegreeDistributionAverage();
+    network1.degreeDistributionAveragedone();
     network1.Data();
 //    network1.view();
 

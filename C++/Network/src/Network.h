@@ -22,7 +22,6 @@ private:
     std::vector<int>node_A;
     std::vector<int>node_B;
     std::vector<int>degree;
-    std::vector<int>degree_ava;
     int size;
 
     std::ofstream generated_data;
@@ -49,7 +48,10 @@ public:
     //v2
     void degreeDistriburionv2(int nodeA);
     void degreeDistributionAveragev2(int nodeA);
+    int & degreeDistributionAveragev3(int nodeA);
     void degreeDistributionAveragedone();
+
+    std::vector<int> degree_ava;
 };
 
 

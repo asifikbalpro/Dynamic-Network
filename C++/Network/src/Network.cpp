@@ -22,7 +22,8 @@ void Network::NodeLinkGenerator() {
         node_A.push_back(rand()%(i+1));
         node_B.push_back(i+1);
         degree.push_back(1); // this is node_B adding on vector.
-//        degreeDistriburionv2(node_A[i]); // calling degreedistributionv2.
+        degree_ava.push_back(0);
+        degreeDistriburionv2(node_A[i]); // calling degreedistributionv2.
     }
 
 //    for (int k = 0; k < node_A.size(); ++k) {
@@ -40,7 +41,7 @@ void Network::NodeLinkGenerator() {
 void Network::degreeDistriburionv2(int nodeA) {
     degree[nodeA] = degree[nodeA]+1; // putting input random value on index of random value on vector.
 }
-
+// this is old one.take's long time to complete..
 void Network::DegreeDistribution() {
     std::cout << "Entering Degree Distribution Function:\t" << std::endl;
     degree.reserve(size);
@@ -73,24 +74,26 @@ void Network::DegreeDistribution() {
    * todo: needed improve.it's take too much time.
    */
 /************************************************************************/
-// this is working progress.
-void Network::degreeDistributionAveragev2(int nodeA) {
-    return degree_ava.push_back(degree_ava[nodeA]+1);
+int & Network::degreeDistributionAveragev3(int nodeA) {
+    return degree_ava[nodeA] += 1;
 }
 
 void Network::degreeDistributionAveragedone() {
-    std::cout<<"start" << std::endl;
+    std::cout<<"degreeDistributionAveragedone for degree"<< std::endl;
     for (int i = 0; i < degree.size(); ++i) {
-        degree_ava.push_back(0);
-        degreeDistributionAveragev2(degree[i]);
+//        degree_ava.push_back(0);
+//        degreeDistributionAveragev2(degree[i]);
+        degreeDistributionAveragev3(degree[i]);
+//        std::cout<< degree[i] << std::endl;
     }
 
-    for (int j = 0; j < degree_ava.size(); ++j) {
-        std::cout<< degree_ava[j] << std::endl;
-    }
+//    for (int j = 1; j < degree_ava.size(); ++j) {
+//        std::cout<< degree_ava[j] << std::endl;
+//    }
 }
 
 /******************************************************************************/
+// this one take long time..
 void Network::DegreeDistributionAverage() {
     std::cout << "Entering Degree Distribution Average Function:\t" << std::endl;
 //    degree_ava.reserve(size);
@@ -123,15 +126,15 @@ void Network::Data() {
     std::cout << "Entering Data Writing Function" << std::endl;
     generated_data.open("generated_data.txt");
     degree_distribution.open("degree_distribution.txt");
-//    average.open("degree_average.txt");
+    average.open("degree_average.txt");
     for (int i = 1; i < size; ++i) { // started from 1. can be changed to 0
         generated_data << node_B[i] << "\t" << node_A[i] << std::endl; // genarated node data.
         degree_distribution << i << "\t" << degree[i] << std::endl; // degree distribution
-//        average << degree_ava[i] << std::endl; // degree average
+        average << i << " " << degree_ava[i] << std::endl; // degree average
     }
     generated_data.close();
     degree_distribution.close();
-//    average.close();
+    average.close();
 }
 
 void Network::view() {
@@ -140,6 +143,8 @@ void Network::view() {
         std::cout<< i << " " << degree[i] << std::endl;
     }
 }
+
+
 
 
 
