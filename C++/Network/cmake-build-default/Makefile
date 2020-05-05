@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Network.dir/build.make CMakeFiles/Network.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Analysis.o: src/Analysis.cpp.o
+
+.PHONY : src/Analysis.o
+
+# target to build an object file
+src/Analysis.cpp.o:
+	$(MAKE) -f CMakeFiles/Network.dir/build.make CMakeFiles/Network.dir/src/Analysis.cpp.o
+.PHONY : src/Analysis.cpp.o
+
+src/Analysis.i: src/Analysis.cpp.i
+
+.PHONY : src/Analysis.i
+
+# target to preprocess a source file
+src/Analysis.cpp.i:
+	$(MAKE) -f CMakeFiles/Network.dir/build.make CMakeFiles/Network.dir/src/Analysis.cpp.i
+.PHONY : src/Analysis.cpp.i
+
+src/Analysis.s: src/Analysis.cpp.s
+
+.PHONY : src/Analysis.s
+
+# target to generate assembly for a file
+src/Analysis.cpp.s:
+	$(MAKE) -f CMakeFiles/Network.dir/build.make CMakeFiles/Network.dir/src/Analysis.cpp.s
+.PHONY : src/Analysis.cpp.s
+
 src/Network.o: src/Network.cpp.o
 
 .PHONY : src/Network.o
@@ -189,6 +216,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/Analysis.o"
+	@echo "... src/Analysis.i"
+	@echo "... src/Analysis.s"
 	@echo "... src/Network.o"
 	@echo "... src/Network.i"
 	@echo "... src/Network.s"

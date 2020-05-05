@@ -17,7 +17,7 @@
      */
 void Network::NodeLinkGenerator() {
     srand(time(0));
-    std::cout << "Entering Node Generator Function:\t" << std::endl;
+//    std::cout << "Entering Node Generator Function:\t" << std::endl;
     for (int i = 0; i < size; i++) {
         node_A.push_back(rand()%(i+1));
         node_B.push_back(i+1);
@@ -79,7 +79,7 @@ int & Network::degreeDistributionAveragev3(int nodeA) {
 }
 
 void Network::degreeDistributionAveragedone() {
-    std::cout<<"degreeDistributionAveragedone for degree"<< std::endl;
+//    std::cout<<"degreeDistributionAveragedone for degree"<< std::endl;
     for (int i = 0; i < degree.size(); ++i) {
 //        degree_ava.push_back(0);
 //        degreeDistributionAveragev2(degree[i]);
@@ -87,7 +87,7 @@ void Network::degreeDistributionAveragedone() {
 //        std::cout<< degree[i] << std::endl;
     }
 
-//    for (int j = 1; j < degree_ava.size(); ++j) {
+//    for (int j = 0; j < degree_ava.size(); ++j) {
 //        std::cout<< degree_ava[j] << std::endl;
 //    }
 }
@@ -124,16 +124,16 @@ void Network::DegreeDistributionAverage() {
    */
 void Network::Data() {
     std::cout << "Entering Data Writing Function" << std::endl;
-    generated_data.open("generated_data.txt");
-    degree_distribution.open("degree_distribution.txt");
+//    generated_data.open("generated_data.txt");
+//    degree_distribution.open("degree_distribution.txt");
     average.open("degree_average.txt");
     for (int i = 1; i < size; ++i) { // started from 1. can be changed to 0
-        generated_data << node_B[i] << "\t" << node_A[i] << std::endl; // genarated node data.
-        degree_distribution << i << "\t" << degree[i] << std::endl; // degree distribution
+//        generated_data << node_B[i] << "\t" << node_A[i] << std::endl; // genarated node data.
+//        degree_distribution << i << "\t" << degree[i] << std::endl; // degree distribution
         average << i << " " << degree_ava[i] << std::endl; // degree average
     }
-    generated_data.close();
-    degree_distribution.close();
+//    generated_data.close();
+//    degree_distribution.close();
     average.close();
 }
 

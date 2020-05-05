@@ -18,7 +18,7 @@
  * after it will start making more node and connect it randomly with previews nodes.
  */
 class Network {
-private:
+public:
     std::vector<int>node_A;
     std::vector<int>node_B;
     std::vector<int>degree;
@@ -30,7 +30,7 @@ private:
 
 
 
-public:
+
     Network(){
         size = 10;
     }

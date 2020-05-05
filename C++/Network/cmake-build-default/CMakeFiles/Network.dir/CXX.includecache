@@ -15,6 +15,18 @@ iomanip
 -
 src/Network.h
 /cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Network.h
+src/Analysis.h
+/cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Analysis.h
+
+/cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Analysis.cpp
+Analysis.h
+/cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Analysis.h
+
+/cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Analysis.h
+vector
+-
+Network.h
+/cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Network.h
 
 /cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Network.cpp
 iostream

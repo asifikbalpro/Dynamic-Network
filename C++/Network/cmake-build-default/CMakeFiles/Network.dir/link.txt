@@ -1,1 +1,1 @@
-/usr/bin/c++.exe    -Wl,--enable-auto-import CMakeFiles/Network.dir/main.cpp.o CMakeFiles/Network.dir/src/Network.cpp.o  -o Network.exe -Wl,--out-implib,libNetwork.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+/usr/bin/c++.exe    -Wl,--enable-auto-import CMakeFiles/Network.dir/main.cpp.o CMakeFiles/Network.dir/src/Network.cpp.o CMakeFiles/Network.dir/src/Analysis.cpp.o  -o Network.exe -Wl,--out-implib,libNetwork.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

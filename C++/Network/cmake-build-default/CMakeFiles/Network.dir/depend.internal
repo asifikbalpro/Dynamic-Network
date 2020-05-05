@@ -3,6 +3,11 @@
 
 CMakeFiles/Network.dir/main.cpp.o
  /cygdrive/d/Projects/Dynamic-Network/C++/Network/main.cpp
+ /cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Analysis.h
+ /cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Network.h
+CMakeFiles/Network.dir/src/Analysis.cpp.o
+ /cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Analysis.cpp
+ /cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Analysis.h
  /cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Network.h
 CMakeFiles/Network.dir/src/Network.cpp.o
  /cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Network.cpp

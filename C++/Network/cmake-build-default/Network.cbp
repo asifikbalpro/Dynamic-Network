@@ -83,6 +83,12 @@
 		<Unit filename="/cygdrive/d/Projects/Dynamic-Network/C++/Network/main.cpp">
 			<Option target="Network"/>
 		</Unit>
+		<Unit filename="/cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Analysis.cpp">
+			<Option target="Network"/>
+		</Unit>
+		<Unit filename="/cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Analysis.h">
+			<Option target="Network"/>
+		</Unit>
 		<Unit filename="/cygdrive/d/Projects/Dynamic-Network/C++/Network/src/Network.cpp">
 			<Option target="Network"/>
 		</Unit>
