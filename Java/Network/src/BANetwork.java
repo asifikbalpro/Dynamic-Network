@@ -5,17 +5,20 @@ import java.util.Random;
 import java.util.Vector;
 
 public class BANetwork {
-
+    // all the files..
     File nodesFile = new File("Data/data_BANet_nodes.txt");
     File file = new File("Data/data_BANet.txt");
+    // all the store vector
     Vector<Integer> node_A = new Vector<>();
     Vector<Integer> node_B = new Vector<>();
     Vector<Integer> degree = new Vector<>();
     Vector<Integer> degreeAverage = new Vector<>();
+    // local init and netsize
     int initNetsize = 5; // initial net size
     int netsize = 1000000; // total netsize;
     int clonedhelpSize = (factorial(initNetsize) / (factorial(2)*factorial(initNetsize-2)))+netsize;
 
+    // factorial
     private int factorial(int n){
         int result = 1;
         while (n >= 1){
@@ -24,6 +27,7 @@ public class BANetwork {
         return result;
     }
 
+    // genarating nodes from initial value
     public void initNodeGenarate(){
         for (int i = 0; i < initNetsize; i++){
             for (int j = i+1; j < initNetsize; j++){
@@ -37,6 +41,7 @@ public class BANetwork {
         afterNodeGenarate();
     }
 
+    // generating nodes after initial
     private void afterNodeGenarate(){
         Random random = new Random();
         for (int i = 0; i < netsize; i++){
@@ -50,10 +55,12 @@ public class BANetwork {
 //        }
     }
 
+    /******************************************************************/
+    // adding degree
     private int adding(int n){
         return degree.set(n, degree.elementAt(n)+1);
     }
-
+    // calling for adding degree
     public void addDegree(){
         for (int i = 0; i < node_A.size();i++){
             degree.add(0);
@@ -66,10 +73,14 @@ public class BANetwork {
         }
     }
 
+
+    /************************************************************/
+
+    // adding degree average
     private int addDegreeAverage(int n){
         return degreeAverage.set(n, degreeAverage.elementAt(n)+1);
     }
-
+     // calling for degree average
     public void degreeAverage(){
         for (int i = 0; i < degree.size(); i++){
             degreeAverage.add(0);
@@ -79,9 +90,11 @@ public class BANetwork {
         }
     }
 
+    /**********************************************************************/
+    // writing data into a file.
     public void data() throws IOException {
-        FileWriter fileWriter = new FileWriter(file.getAbsoluteFile());
-        FileWriter fileWriter1 = new FileWriter(nodesFile.getAbsoluteFile());
+        FileWriter fileWriter = new FileWriter(file.getAbsoluteFile()); // this one contain degree average data
+        FileWriter fileWriter1 = new FileWriter(nodesFile.getAbsoluteFile()); // this one contain nodes
         for (int i = 0; i < node_A.size(); i++){
             fileWriter1.write(node_B.elementAt(i)+ "\t"+ node_A.elementAt(i) + "\n");
         }
@@ -92,6 +105,7 @@ public class BANetwork {
         fileWriter.close();
     }
 
+    // this will view whatever needed.
     public void view(){
         for (int i =0; i < degree.size(); i++){
             System.out.println(i + " "+degree.elementAt(i));
