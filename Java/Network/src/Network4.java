@@ -163,15 +163,15 @@ class Network4 {
         for (int i = 0; i < node_A.length; i++){
             fileWriter.write(node_A[i] +"\t"+ node_B[i]+"\n");
         }
-        for (int i = 0; i < degree.length; i++){
-            fileWriter2.write(i + "\t" + degree[i] +"\n");
-        }
-        for (int i = 0; i < degree_ava.length; i++){
-            fileWriter3.write(i + "\t" + degree_ava[i] +"\n");
-        }
+//        for (int i = 0; i < degree.length; i++){
+//            fileWriter2.write(i + "\t" + degree[i] +"\n");
+//        }
+//        for (int i = 0; i < degree_ava.length; i++){
+//            fileWriter3.write(i + "\t" + degree_ava[i] +"\n");
+//        }
         fileWriter.close();
-        fileWriter2.close();
-        fileWriter3.close();
+//        fileWriter2.close();
+//        fileWriter3.close();
     }
 
     /**

@@ -6,6 +6,8 @@ import java.util.Vector;
 public class DataWrite {
 
     Vector<Integer> averageData = new Vector<>();
+
+    // constructor
     DataWrite() throws IOException {
         Run run = new Run();
         run.net_4(10,10);
@@ -15,6 +17,7 @@ public class DataWrite {
 //        System.out.println(averageData);
         data();
     }
+
     DataWrite(int netSize, int runTimes) throws IOException {
         Run run = new Run();
         run.net_4(netSize,runTimes);
@@ -35,12 +38,14 @@ public class DataWrite {
         System.out.println(averageData);
         data();
     }
+
+
     /// files.
     File file = new File("Data/data_net_4.txt");
     File file_graph = new File("Data/data_net_4_G.txt");
     File file_graph2 = new File("Data/data_net_4_G_D.txt");
 
-
+    // data writing function..
     public void data() throws IOException {
         System.out.println("writing data");
 //        FileWriter fileWriter = new FileWriter(file.getAbsoluteFile());
